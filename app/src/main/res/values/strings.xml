@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">jetpackDemo</string>
+    <string name="submit_success">提交成功</string>
+</resources>

@@ -1,0 +1,62 @@
+ext {
+    support_library_version = '27.1.1'
+    android_arch_lib_version = '1.1.0'
+    dependencies = [
+            //support
+            v4                      : "com.android.support:support-compat:$support_library_version",
+            appcompat_v7            : "com.android.support:appcompat-v7:$support_library_version",
+            //test
+            junit                   : 'junit:junit:4.12',
+            runner                  : 'com.android.support.test:runner:1.0.2',
+            espresso                : 'com.android.support.test.espresso:espresso-core:3.0.2',
+            //
+            constraint_layout       : 'com.android.support.constraint:constraint-layout:1.1.2',
+            //rx
+            rxjava                  : "io.reactivex.rxjava2:rxjava:2.2.4",
+            rxandroid               : 'io.reactivex.rxjava2:rxandroid:2.1.0',
+            //图片
+            glide                   : 'com.github.bumptech.glide:glide:4.8.0',
+            glide_compiler          : 'com.github.bumptech.glide:compiler:4.8.0',
+            //retrofit
+            retrofit                : 'com.squareup.retrofit2:retrofit:2.5.0',
+            //gson
+            gson                    : 'com.google.code.gson:gson:2.8.5',
+            //jetpack
+            live_data_and_view_model: "android.arch.lifecycle:extensions:$android_arch_lib_version",
+            view_model              : "android.arch.lifecycle:viewmodel:$android_arch_lib_version",
+            live_data               : "android.arch.lifecycle:livedata:$android_arch_lib_version",
+            lifecycle_compiler      : "android.arch.lifecycle:compiler:$android_arch_lib_version",
+            //okhttp
+            okhttp                  : 'com.squareup.okhttp3:okhttp:3.12.0'
+    ]
+    libs = [
+            dependencies.v4,
+            dependencies.appcompat_v7,
+            //
+            dependencies.constraint_layout,
+            //rx
+            dependencies.rxjava,
+            dependencies.rxandroid,
+            //图片
+            dependencies.glide,
+            dependencies.glide_compiler,
+            //retrofit
+            dependencies.retrofit,
+            //gson
+            dependencies.gson,
+            //jetpack
+            dependencies.live_data_and_view_model,
+            //okhttp
+            dependencies.okhttp
+    ]
+    testLibs = [
+            dependencies.junit
+    ]
+
+    annceationProcessors = [
+            dependencies.test_runner,
+            dependencies.espresso,
+            dependencies.glide,
+            dependencies.live_data_and_view_model
+    ]
+}

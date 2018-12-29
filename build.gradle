@@ -1,0 +1,30 @@
+
+
+buildscript {
+    //apply from:'config.gradle'
+    repositories {
+        //google()
+       // jcenter()
+        maven {
+            url "http://32.12.21.103:8081/repository/maven-public/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+
+    }
+}
+
+allprojects {
+    repositories {
+        //google()
+       // jcenter()
+        maven {
+            url "http://32.12.21.103:8081/repository/maven-public/"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
